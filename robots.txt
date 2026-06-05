@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# AI Crawlers (OpenAI, Anthropic, Google AI) 허용 여부 설정
+# AI 봇에 의한 데이터 학습을 허용하여 AI 검색(ChatGPT, Perplexity) 노출을 유도합니다.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.yourdomain.com/sitemap.xml

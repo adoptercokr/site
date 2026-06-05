@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- 기본 SEO 메타 태그 -->
+    <title>시니어 인생 지혜 센터 - 사주, 타로, 두뇌건강, 성격분석</title>
+    <meta name="description" content="시니어를 위한 맞춤형 심리 및 운세 분석 서비스입니다. 무료 사주팔자, 띠별 운세, 타로점, MBTI 성격테스트, 치매예방 두뇌게임, 로또 번호 추출 등 다양한 인생 지혜를 만나보세요.">
+    <meta name="keywords" content="시니어, 운세, 사주팔자, 타로카드, MBTI, 치매예방, 두뇌게임, 꿈해몽, 로또당첨번호, 무료운세">
+    <meta name="author" content="인생 지혜 센터">
+    <link rel="canonical" href="https://www.yourdomain.com/">
+    
+    <!-- 다국어/지역 타겟팅 (한국어 대상) -->
+    <link rel="alternate" hreflang="ko-KR" href="https://www.yourdomain.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.yourdomain.com/" />
+    
+    <!-- Open Graph (소셜 미디어 공유용) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:title" content="시니어 인생 지혜 센터 - 사주부터 두뇌건강까지">
+    <meta property="og:description" content="시니어를 위한 맞춤형 분석 센터. 오늘의 운세, 성격 테스트, 치매 예방 게임을 무료로 즐겨보세요.">
+    <meta property="og:image" content="https://www.yourdomain.com/og-image.jpg">
+    <meta property="og:site_name" content="인생 지혜 센터">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="시니어 인생 지혜 센터">
+    <meta name="twitter:description" content="무료 사주, 타로, 두뇌게임, 꿈해몽 등 시니어 특화 콘텐츠">
+    <meta name="twitter:image" content="https://www.yourdomain.com/og-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="common.css">
+    
+    <style>
+        /* 방구석연구소 스타일 메인 그리드 및 카드 디자인 */
+        .hero-section {
+            text-align: center;
+            padding: 30px 15px;
+            background: linear-gradient(135deg, #FF6B35, #FF8E53);
+            color: white;
+            border-radius: 0 0 24px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        .hero-title { font-size: 28px; font-weight: 900; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero-sub { font-size: 16px; opacity: 0.9; line-height: 1.5; }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 0 15px 30px;
+        }
+        @media (max-width: 480px) {
+            .main-grid { grid-template-columns: 1fr; }
+        }
+        
+        .test-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+            border: 2px solid transparent;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .test-card:hover, .test-card:active {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(255, 107, 53, 0.15);
+            border-color: var(--primary);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 12px; left: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+        .b-hot { background: #e74c3c; }
+        .b-new { background: #9b59b6; }
+        .b-best { background: #f1c40f; color: #333; }
+        
+        .card-icon {
+            font-size: 55px;
+            margin: 15px 0;
+            filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s;
+        }
+        .test-card:hover .card-icon { transform: scale(1.1) rotate(5deg); }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            word-break: keep-all;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+        
+        /* 시맨틱 태그 숨김 (SEO 용) */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+        }
+    </style>
+
+    <!-- 구조화 데이터 (JSON-LD) - AI 크롤러 및 구글 리치 스니펫용 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "인생 지혜 센터",
+      "url": "https://www.yourdomain.com/",
+      "description": "시니어를 위한 전문 심리 분석, 사주, 타로, 두뇌 게임 사이트",
+      "publisher": {
+        "@type": "Organization",
+        "name": "인생 지혜 센터 운영진",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yourdomain.com/logo.png"
+        }
+      }
+    }
+    </script>
+</head>
+<body style="background-color: var(--bg); padding: 0;">
+
+<div class="app-container" style="max-width: 600px; margin: 0 auto; min-height: 100vh; background: #FEF7F0;">
+    
+    <!-- SEO용 메인 타이틀 (시각적으로는 가려지거나 자연스럽게 배치됨) -->
+    <h1 class="sr-only">시니어 맞춤형 사주, 성격 테스트 및 두뇌 훈련 사이트 모음</h1>
+
+    <header class="hero-section">
+        <div style="font-size: 50px; margin-bottom: 10px;">👵👴</div>
+        <h2 class="hero-title">인생 지혜 연구소</h2>
+        <p class="hero-sub">재미로 보는 나의 운명과 성격,<br>그리고 치매 예방 두뇌 훈련까지!</p>
+    </header>
+
+    <main>
+        <section class="main-grid">
+            
+            <!-- 카드 1: 사주 -->
+            <a href="saju.html" class="test-card">
+                <span class="badge b-best">BEST</span>
+                <div class="card-icon">📜</div>
+                <h3 class="card-title">심층 사주 리포트</h3>
+                <p class="card-desc">생년월일로 알아보는<br>나의 타고난 운명과 재물운</p>
+            </a>
+
+            <!-- 카드 2: 타로 -->
+            <a href="tarot-v2.html" class="test-card">
+                <span class="badge b-hot">HOT</span>
+                <div class="card-icon">🔮</div>
+                <h3 class="card-title">운명의 타로점</h3>
+                <p class="card-desc">과거, 현재, 미래를<br>직접 뽑아보는 신비한 카드</p>
+            </a>
+
+            <!-- 카드 3: 두뇌 건강 -->
+            <a href="brain.html" class="test-card">
+                <span class="badge b-new">NEW</span>
+                <div class="card-icon">🧠</div>
+                <h3 class="card-title">두뇌 치매 예방</h3>
+                <p class="card-desc">하루 5분 투자로<br>젊고 건강한 뇌 만들기</p>
+            </a>
+
+            <!-- 카드 4: MBTI -->
+            <a href="mbti.html" class="test-card">
+                <div class="card-icon">🧬</div>
+                <h3 class="card-title">초정밀 성격 분석</h3>
+                <p class="card-desc">20가지 심리 질문으로<br>알아보는 진짜 내 모습</p>
+            </a>
+
+            <!-- 카드 5: 로또 -->
+            <a href="lotto2.html" class="test-card">
+                <span class="badge b-best">인기</span>
+                <div class="card-icon">🍀</div>
+                <h3 class="card-title">천기누설 로또</h3>
+                <p class="card-desc">확률 기반 빅데이터로<br>뽑아보는 행운의 번호</p>
+            </a>
+
+            <!-- 카드 6: 꿈해몽 -->
+            <a href="dream.html" class="test-card">
+                <div class="card-icon">🌙</div>
+                <h3 class="card-title">꿈 해몽 사전</h3>
+                <p class="card-desc">어젯밤 꾼 신기한 꿈,<br>길몽일까 흉몽일까?</p>
+            </a>
+
+            <!-- 카드 7: 인연 궁합 -->
+            <a href="love.html" class="test-card">
+                <div class="card-icon">💕</div>
+                <h3 class="card-title">천생연분 궁합</h3>
+                <p class="card-desc">우리는 얼마나 잘 맞을까?<br>오행으로 보는 궁합 지수</p>
+            </a>
+
+            <!-- 카드 8: 동물 관상 -->
+            <a href="animal.html" class="test-card">
+                <div class="card-icon">🐯</div>
+                <h3 class="card-title">AI 동물상 관상</h3>
+                <p class="card-desc">내 얼굴은 어떤 동물상?<br>인공지능 관상 스캐너</p>
+            </a>
+
+        </section>
+    </main>
+
+    <!-- 푸터 영역 추가 (SEO 및 신뢰도 향상) -->
+    <footer style="text-align: center; padding: 20px; color: #888; font-size: 13px; border-top: 1px solid #ddd; margin-top: 20px;">
+        <p>Copyright © 2026 인생지혜연구소. All rights reserved.</p>
+        <p style="margin-top: 5px;">본 사이트의 운세 및 심리 테스트 결과는 맹신하기보다는 오락과 참고용으로 즐겨주시길 바랍니다.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
